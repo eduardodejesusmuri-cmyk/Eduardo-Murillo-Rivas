@@ -1,0 +1,6 @@
+{
+  "name": "Sistema de Entrega de Vehículos — SAMSA",
+  "description": "Sistema para la administración, búsqueda y generación de actas de entrega, constancias de accesorios, de garantía y órdenes de salida de vehículos nuevos para Servicio Automotriz Mántica S.A.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

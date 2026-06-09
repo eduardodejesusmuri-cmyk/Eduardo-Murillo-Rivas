@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090b0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #232a3f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4922a;
+}
+
+/* Custom print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Hide all interactive screen elements completely */
+  .no-print, header, footer, nav, .nav-btn, button, select, textarea, input, .fixed {
+    display: none !important;
+  }
+
+  /* Show the prints container */
+  main {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  /* Optimize layout for paper printing */
+  .doc-page {
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: black !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    min-height: 100vh !important;
+    position: relative !important;
+  }
+
+  .doc-page:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+}
